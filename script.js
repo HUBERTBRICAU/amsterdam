@@ -1,18 +1,25 @@
 var swiper = new Swiper(".swiper", {
-  slidesPerView: 2,
-  spaceBetween: 10,
-  loop: true,
+  slidesPerView: 4,
+  spaceBetween: 5,
+  speed:500,
+  preventClicks:true,
+  noSwiping:true,
   centerSlide:'true',
-  fade:'true',
-  grabCursor:'true',
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets:true,
-  },
+  freeMode:false,
+
   navigation: {
     nextEl: ".next",
     prevEl: ".prev",
-  },
-
+  }
+//  breakpoints:{
+//   800:{
+//     slidesPerView:1,
+//     spaceBetween:10,},
+//   950:{
+//     slidesPerView:4 ,
+//     spaceBetween:30,},  
+//   1200:{
+//     slidesPerView:1,
+//     spaceBetween:30,},
+//  }
 });
