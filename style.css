@@ -1,112 +1,137 @@
-/* <!----------- AMSTERDAM -----------> */
 
-<!DOCTYPE html>
-<html lang="fr">
+/* +++++++++++++++++++++++++ AMSTERDAM +++++++++++++++++++++++++  */
 
-<head>
-  <meta charset="utf-8" />
-  <title>Swiper demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="style.css">
-</head>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-<body>
- <h1>Les gâteaux</h1>
- <div class="container">
-    <div class="swiper">
-      <div class="swiper-wrapper">
+html {
+  scroll-behavior: smooth;
+}
 
-        <!-- ================================================================     -->
-        <div class="swiper-slide">
-          <div class="content">
-            <img src="IMAGES/img1.jpg" width="350px" height="250px" >
-            <h2>carolo</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur </p>
-            <button class="btn">Voir plus</button>
-          </div>
-        </div>
-        <!-- ================================================================     -->
-        <div class="swiper-slide">
-          <div class="content">
-            <img src="IMAGES/img2.jpg" width="350px" height="250px" >
-            <h2>ardoises </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur</p>
-            <button class="btn">Voir plus</button>
-          </div>
-        </div>
-          <!-- ================================================================     -->
-        <div class="swiper-slide">
-          <div class="content">
-            <img src="IMAGES/img3.png" width="350px" height="250px" >
-            <h2>gâteau mollet</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur</p>
-            <button class="btn">Voir plus</button>
-          </div>
-        </div>
-          <!-- ================================================================     -->
-        <div class="swiper-slide">
-          <div class="content">
-            <img src="IMAGES/img4.jpg" width="350px" height="250px" >
-            <h2>carolo</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur</p>
-            <button class="btn">Voir plus</button>
-          </div>
-        </div>
-        <!-- ================================================================     -->
-                 <div class="swiper-slide">
-          <div class="content">
-            <img src="IMAGES/img10.jpg" width="350px" height="250px" >
-            <h2>carolo</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur</p>
-            <button class="btn">Voir plus</button>
-          </div>
-        </div>
-        <!-- ================================================================     -->
-        <div class="swiper-slide">
-          <div class="content">
-            <img src="IMAGES/img4.jpg" width="350px" height="250px" >
-            <h2>carolo</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur</p>
-            <button class="btn">Voir plus</button>
-          </div>
-        </div>
-        <!-- ================================================================     -->
-        <div class="swiper-slide">
-          <div class="content">
-            <img src="IMAGES/img4.jpg" width="350px" height="250px" >
-            <h2>carolo</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur</p>
-            <button class="btn">Voir plus</button>
-          </div>
-        </div>
-        <!-- ================================================================     -->
-        <div class="swiper-slide">
-          <div class="content">
-            <img src="IMAGES/img6.jpg" width="350px" height="250px" >
-            <h2>carolo</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur</p>
-            <button class="btn">Voir plus</button>
-          </div>
-        </div>
-      </div> 
-      <ul class="control">
-        <li class="prev">
-          <ion-icon class="arrow" name="caret-back-outline"></ion-icon>
-        </li>
-        <li class="next">
-          <ion-icon class="arrow" name="caret-forward-outline"></ion-icon>
-        </li>
-      </ul>
-    </div>
- <div>
-   <!--===============================================================     -->
+img {
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+h1 {
+  margin: 0;
+  font-size: 2.2em;
+  font-weight: 500;
+  user-select: none;
+  text-transform: uppercase;
+}
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="script.js"></script>
-<script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" ></script>
-<script  nomodule  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" ></script>
-</body>
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: burlywood;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 78%;
+}
+.swiper {
+  max-width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  max-width: 250px;
+  border: black solid 2px;
+  border-radius: 15px;
+  max-width: 20px 0 40px;
+  overflow: hidden;
+}
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-</html>
+  gap: 10px;
+  height: 400px;
+  padding: 0 5px 0 15px;
+  background: grey;
+  color: #fff;
+  user-select: none;
+}
+.content::before,
+.content::after {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(180deg, grey, rgb(100, 90, 90));
+}
+.content img {
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 6px 6px 0px -3px #9091e9;
+}
+.content h2 {
+  background-color: aquamarine;
+  height: 30px;
+  background-color: gray;
+  text-transform: capitalize;
+}
+.content p {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: black;
+  height: 40px;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 300;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px;
+  height: 28px;
+  background-color: rgb(209, 208, 208);
+  cursor: pointer;
+}
+.btn:hover {
+  transform: scale(1.2);
+}
+ .control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  /* width: 75px;
+  margin-top: 30px; */
+  gap: 5em;
+} 
+.control li{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom,#99559b,#3b3d8a);
+  /* box-shadow: 0 6px 6px rgba(0,0,0,0.4),inset 0 4px 4px burlywood; */
+  padding: 18px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.arrow{
+  font-size: 1.5rem;
+  color: white;
+}
